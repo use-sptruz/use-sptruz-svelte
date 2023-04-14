@@ -1,0 +1,80 @@
+{
+  "name": "@use-sptruz/svelte",
+  "version": "0.0.2",
+  "description": "A React hook for using svelte components in React, a small library that allows you to use svelte components in React.",
+  "keywords": [
+    "react",
+    "react-hook",
+    "svelte"
+  ],
+  "author": {
+    "name": "Mohammad Abu Mattar",
+    "email": "mohammad.khaled@outlook.com",
+    "url": "https://mkabumattar.github.io/"
+  },
+  "homepage": "https://github.com/use-sptruz/use-sptruz-svelte#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/use-sptruz/use-sptruz-svelte.git"
+  },
+  "bugs": {
+    "url": "https://github.com/use-sptruz/use-sptruz-svelte/issues"
+  },
+  "scripts": {
+    "lint:fix": "eslint --ignore-path .eslintignore \"src/**/*.ts\" --fix",
+    "lint:check": "eslint --ignore-path .eslintignore \"src/**/*.ts\"",
+    "prettier:fix": "prettier -w ./src --ignore-unknown --no-error-on-unmatched-pattern",
+    "prettier:check": "prettier --check ./src --no-error-on-unmatched-pattern",
+    "check": "npm run lint:check && npm run prettier:check",
+    "fix": "npm run lint:fix && npm run prettier:fix",
+    "clean:lib": "rm -rf lib",
+    "clean:types": "rm -rf lib/types",
+    "build": "npm run clean:lib && rollup --config rollup.config.mjs && npm run clean:types"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": "*"
+  },
+  "peerDependenciesMeta": {
+    "react-dom": {
+      "optional": true
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@rollup/plugin-terser": "0.4.1",
+    "@rollup/plugin-typescript": "11.1.0",
+    "@types/node": "18.15.11",
+    "@types/react": "18.0.35",
+    "@types/react-dom": "18.0.11",
+    "@typescript-eslint/eslint-plugin": "5.58.0",
+    "@typescript-eslint/parser": "5.58.0",
+    "eslint": "8.38.0",
+    "eslint-config-prettier": "8.8.0",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-simple-import-sort": "10.0.0",
+    "eslint-plugin-unused-imports": "2.0.0",
+    "prettier": "2.8.7",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "rollup": "3.20.2",
+    "rollup-plugin-dts": "5.3.0",
+    "tslib": "2.5.0",
+    "tsx": "3.12.6",
+    "typescript": "5.0.4"
+  },
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "require": "./lib/index.js",
+      "import": "./lib/index.mjs",
+      "types": "./index.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "/lib",
+    "/index.d.ts"
+  ]
+}
