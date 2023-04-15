@@ -1,6 +1,6 @@
 {
   "name": "@use-sptruz/svelte",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A React hook for using svelte components in React, a small library that allows you to use svelte components in React.",
   "keywords": [
     "react",

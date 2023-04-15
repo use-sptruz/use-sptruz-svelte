@@ -19,6 +19,30 @@ pnpm add @use-sptruz/svelte
 
 ## Usage
 
+### Prerequisites
+
+This package requires the following:
+
+- Create React App with Vite
+- Svelte
+- Sveltejs plugin for Vite
+
+```bash
+# npm
+npm install --save svelte
+npm install --save-dev @sveltejs/vite-plugin-svelte
+
+# yarn
+yarn add svelte
+yarn add --dev @sveltejs/vite-plugin-svelte
+
+# pnpm
+pnpm add svelte
+pnpm add --dev @sveltejs/vite-plugin-svelte
+```
+
+### Example
+
 ```svelte
 <script lang="ts">
   export let txt = "Hello from Svelte!";
